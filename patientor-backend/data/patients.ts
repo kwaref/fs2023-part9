@@ -1,5 +1,4 @@
-import { UnsecuredPatient } from "../src/types";
-import { toNewPatient } from "../src/utils";
+import { Patient } from "../src/types";
 
 const data = [
     {
@@ -24,7 +23,8 @@ const data = [
         "dateOfBirth": "1970-04-25",
         "ssn": "250470-555L",
         "gender": "other",
-        "occupation": "Technician"
+        "occupation": "Technician",
+        "entries": []
     },
     {
         "id": "d2773822-f723-11e9-8f0b-362b9e155667",
@@ -44,8 +44,8 @@ const data = [
     }
 ];
 
-const patientsEntries: UnsecuredPatient[] = data.map(obj => {
-    const object = toNewPatient(obj) as UnsecuredPatient;
+const patientsEntries: Patient[] = data.map(obj => {
+    const object = obj as Patient;
     object.id = obj.id;
     return object;
 });

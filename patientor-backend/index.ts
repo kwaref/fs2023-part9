@@ -1,9 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import express from 'express';
 const app = express();
-const cors = require('cors');
+import cors from 'cors';
 import patientRouter from './src/routes/patients';
 
 app.use(cors());
